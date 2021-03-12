@@ -1,0 +1,609 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+/* CSS Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Commissioner', sans-serif;
+    background-color: #FAFAFA;
+   
+    height: 100%;
+}
+
+header{
+    padding: 0 2rem;
+}
+
+h1{
+    margin: .5rem;
+}
+
+h2{
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    color: hsl(0, 0%, 48%);
+    font-size: .875rem;
+    line-height: 1.5rem;
+}
+
+/* Components */
+/* Container */
+.main-container{
+    /* background-color: lightblue; */
+    margin-top: -5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    max-width: 650px ;
+}
+
+.container{
+    background-color: white;
+    border-radius: 7px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(235, 235, 235, .5)
+}
+
+.btn{
+    border: none;
+    padding: .875rem 1.4rem;
+    border-radius: 100px;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font-weight: 700;
+    font-size: .8rem;
+    transition: background-color .1s ease-in;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: hsl(176, 72%, 28%);
+}
+
+input[type="number"]{
+    border-radius: 100px;
+    border: 2px solid lightgray;
+    /* color: hsl(0, 0%, 48%); */
+    font-weight: 700;
+    max-width: 100px;
+    padding: .875rem 1.4rem;
+    text-align: center;
+}
+
+input[type="number"]:focus{
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form .input-symbol{
+    position: relative;
+}
+
+form .input-symbol::before{
+    position: absolute;
+    top: .1rem;
+    content: '$';
+    left: 1.2rem;
+    font-size: .875rem;
+    color: hsl(0, 0%, 48%);
+}
+
+
+/* Navabr */
+.navbar{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.2rem;
+    max-width: 950px;
+    margin: auto;
+    /* background-color: darkblue; */
+    color: white;
+}
+
+.brand-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.navbar-links ul{
+    font-size: .8rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.nav-toggle{
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/* Header */
+header{
+    background-image: url(./images/image-hero-desktop.jpg);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+} 
+
+
+/* Project Header */
+.project-header{
+    padding-top: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.project-image{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project-header .call-to-action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+.project-header .call-to-action .btn{
+    min-width: 150px;
+}
+
+.btn-bookmark{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: #F4F8F9;
+    border-radius: 100px;
+    padding-right: 1.5rem;
+}
+
+.btn-bookmark img {
+    height: 43px;
+    transition: all .3s ease-in-out;
+}
+
+.btn-bookmark img.bookmarked{
+   filter: invert(65%) sepia(8%) saturate(2742%) hue-rotate(127deg) brightness(92%) contrast(94%);
+}
+
+.btn-bookmark span{
+    color: hsl(0, 0%, 48%);
+    font-weight: 700;
+    font-size: .8rem;
+    margin-left: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.btn-bookmark span.bookmarked{
+    color: hsl(176, 72%, 28%);
+}
+
+/* Project Status */
+.project-status .status-items-container{
+    /* background-color: lightgreen; */
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    /* justify-content: space-between; */
+}
+
+.project-status .status-item{
+    /* background-color: lightpink; */
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: 2px solid rgba(235, 235, 235, 1);
+}
+
+.project-status .status-item:last-child{
+    border-right: none;
+}
+
+.project-status .status-item .status-item-display{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: .375rem;
+}
+
+.project-status p {
+    margin: 0;
+}
+
+.project-status hr {
+    border-top: .5rem solid black;
+    border-radius: 100px;
+}
+
+.progress-bar{
+    width: 100%; 
+    height: .6rem;
+    border-radius: 100px;
+    background-color: rgba(235, 235, 235, 1);
+}
+
+.progress-bar-fill{
+    height: 100%;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 100px;
+    transition: width .5s;
+}
+
+/* Pledge/About Section */
+/* About */
+.project-about {
+    margin-bottom: 1.2rem;
+}
+.project-about p{
+    margin-bottom: 1rem;
+}
+
+
+/* Pledge Items */
+.pledge-item-container{
+   border: 1px solid rgba(235, 235, 235, 1);
+   border-radius: 7px;
+   margin-bottom: 1rem;
+   padding: 1rem;
+}
+
+.pledge-item-container.out-of-stock{
+    opacity: .5;
+    pointer-events: none;
+}
+
+.pledge-item-container.out-of-stock button{
+    background-color: #CBCBCB;
+}
+
+.pledge-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.pledge-title p{
+    color: hsl(176, 50%, 47%);
+}
+
+.pledge-select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.pledge-select div {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.pledge-select span {
+    font-size: .875rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 48%);
+}
+
+
+/* Modals */
+/* Modal Basic Styles */
+.modal h2{
+    margin: 0;
+}
+
+.modal > p{
+    margin-bottom: 1rem;
+}
+
+/* Modal Function */
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    max-height: 99vh;
+    max-width: 625px;
+    min-width: 350px;
+    z-index: 10;
+    transition: 200ms ease-in-out;
+    overflow: scroll;
+ }
+
+ .modal::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+ .modal.active{
+    transform: translate(-50%,-50%) scale(.9);
+ }
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* Thank you Modal */
+#modal-thankyou{
+    text-align: center;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+#modal-thankyou img, 
+#modal-thankyou h3,
+#modal-thankyou p{
+    margin-bottom: 1.2rem;
+}
+
+/* Back this project Modal */
+.pledge-item-container{
+    transition: 200ms ease-in-out;
+}
+.pledge-item-container .tier-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pledge-item-container.active{
+    border: 2px solid hsl(176, 72%, 28%);
+}
+
+.pledge-item-container .tier-container:hover{
+    cursor: pointer;
+}
+
+.pledge-item-container .tier-container:hover > h3{
+    color: hsl(176, 50%, 47%)
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-header .close-btn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+}
+
+.tier-container .radio-circle{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin-right: 1.2rem;
+    position: relative;
+}
+
+.pledge-item-container.active .inner-radio-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: .5rem;
+    width: .5rem;
+    border-radius: 100%;
+    background-color: hsl(176, 50%, 47%);
+}
+
+.tier-container p{
+    color: hsl(176, 50%, 47%);
+    margin-left: 1.2rem ;
+}
+
+.tier-container .pledge-availablity{
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.pledge-availablity.mobile{
+    display: none;
+}
+
+.tier-container .pledge-availablity span{
+    font-size: .875rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 48%);   
+}
+
+.modal-pledge-p{
+    margin-left: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.pledge-form-container{
+    display: none;
+    transition: 200ms ease-in-out;
+}
+
+.pledge-form-container.active{
+    display: flex;
+    border-top: 1px solid rgba(235, 235, 235, 1);
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+.pledge-form-container form{
+    margin-left: auto;
+}
+
+
+
+/* Mobile Layout */
+@media (max-width: 650px){
+    /* Navbar */
+    .navbar-links{
+        display: none;
+    }
+
+    .navbar-links.active{
+        display: flex;
+        margin-top: .5rem;
+        width: 100%;
+        /* justify-content: flex-start; */
+        background-color: white;
+        border-radius: 7px;
+    }
+
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%
+    }
+
+    .navbar-links ul li{
+        border-bottom: 1px solid rgba(235, 235, 235, 1);
+    }
+
+    .navbar-links ul li:last-child{
+        border-bottom: none;
+    }
+
+    .navbar-links ul li a{
+        color: black;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+   
+   /* Bookmark Btn */
+   .btn-bookmark{
+       background-color: transparent;
+   }
+   .btn-bookmark span{
+    display: none;
+    }
+
+    /* Project Status */
+    .project-status .status-items-container{
+        /* background-color: lightgreen; */
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+
+    .project-status .status-item{
+        /* background-color: orange; */
+        border-right: none;
+        border-bottom: 2px solid rgba(235, 235, 235, 1);
+        margin-right: 0;
+        padding-right: 0;
+        margin-bottom: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .project-status .status-item:last-child{
+        border-bottom: none;
+    }
+
+    /* Pleadge Tiers/Items */
+    .pledge-title{
+        display: block;
+    }
+
+    .pledge-select{
+        display: block;
+    }
+
+    .pledge-availablity {
+        margin-bottom: 1.2rem;
+    }
+
+
+    /* Modal */
+    .pledge-item-container .tier-container .pledge-availablity{
+        display: none;
+    }
+
+    .pledge-item-container .tier-container{
+        display: grid;
+        grid-template-columns: 2.2rem auto;
+    }
+
+    .pledge-item-container .tier-container p{
+        grid-column: 2/3;
+        margin: 0;
+    }
+
+    .pledge-form-container{
+        flex-direction: column;
+    }
+
+    .pledge-form-container form{
+        margin-left: 0;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    .pledge-availablity.mobile{
+        display: block;
+        font-weight: 700;
+    }
+    
+    .pledge-availablity.mobile span{
+        font-size: .875rem;
+        font-weight: 400;
+        color: hsl(0, 0%, 48%);   
+    }
+}
