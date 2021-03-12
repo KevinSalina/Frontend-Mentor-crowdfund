@@ -124,7 +124,6 @@ updateInvDisplay()
 updatePB()
 
 
-
 // Modals and Overlay
 openModalButtons.forEach(btn =>{
     btn.addEventListener('click', ()=>{
